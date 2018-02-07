@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_Linear"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/left_Move"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_chevron_left_black_48dp"/>
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:id="@+id/current_Text"
+            android:fontFamily="serif"
+           />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_Move"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_chevron_right_black_48dp"/>
+    </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/et_tag_name"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_height="wrap_content"
+            android:hint="Tag friends"
+            android:layout_below="@id/view_Linear"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:fontFamily="serif"
+            android:textColor="@color/colorAccent"/>
+
+
+
+    <com.cunoraz.tagview.TagView
+        xmlns:tagview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tag_group"
+        android:layout_below="@id/et_tag_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        tagview:lineMargin="5dp"
+        tagview:tagMargin="5dp"
+        tagview:textPaddingLeft="8dp"
+        tagview:textPaddingTop="5dp"
+        tagview:textPaddingRight="8dp"
+        tagview:textPaddingBottom="5dp" />
+
+
+
+
+
+</RelativeLayout>

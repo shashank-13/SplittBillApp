@@ -1,0 +1,3 @@
+# SplittBillApp
+
+An android app using which you can create , join groups add your expense and notify your group in real time. It is backed by the cloud messaging service provided by the firebase. The android application simplifies the cumbersome task of splitting money and gives a final list of dependencies of who owes whom what .You can even tag specific members in your group which makes it more flexible to use.After clearing his dues a user can leave a group any time.It supports even offline mode for places where it is hard to reach Internet.User can always sync the pending updates when connected with internet

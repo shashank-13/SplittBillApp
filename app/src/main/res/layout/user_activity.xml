@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/spinner1"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_below="@id/spinner1"
+            android:layout_marginTop="24dp"
+            android:id="@+id/spinner2"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_below="@id/spinner2"
+            android:id="@+id/button_submit"
+            android:textStyle="bold"
+            android:text="Submit"/>
+
+
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="exitUntilCollapsed"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:divider="@color/navigationBarColor"
+        android:dividerHeight="2dp"
+        android:id="@+id/category_list_view"
+        android:layout_below="@id/toolbar"
+        android:visibility="gone"
+        android:minHeight="@dimen/button_padding"
+        android:layout_height="wrap_content"
+       />
+
+
+</RelativeLayout>

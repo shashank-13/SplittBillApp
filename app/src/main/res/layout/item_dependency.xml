@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/left_Drawable"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_Name"
+        android:fontFamily="serif"
+        android:layout_centerVertical="true"
+        android:textSize="14sp"
+        android:layout_toEndOf="@id/left_Drawable"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center_vertical"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/amount"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:textColor="@color/navigationBarColor"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_forward_black_24dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/right_Drawable"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/last_Name"
+        android:layout_toStartOf="@id/right_Drawable"
+        android:fontFamily="serif"
+        android:textSize="14sp"
+        android:layout_marginEnd="8dp"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"/>
+
+
+
+</RelativeLayout>

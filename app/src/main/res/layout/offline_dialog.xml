@@ -1,0 +1,84 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/ic_chevron_right_black_24dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_group_name"
+        android:inputType="text"
+        android:completionThreshold="1"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:layout_marginStart="16dp"
+        android:hint="Groupname"
+
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_marginStart="16dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/ic_chevron_right_black_24dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_expense"
+            android:fontFamily="serif"
+            android:inputType="number"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:hint="Expense"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:layout_width="240dp"
+            android:drawableLeft="@drawable/ic_chevron_right_black_24dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_addMembers"
+            android:completionThreshold="1"
+            android:inputType="text"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="@color/colorAccent"
+            android:layout_marginStart="16dp"
+            android:hint="Tick to tag friends"
+
+            />
+
+        <ImageButton
+            android:id="@+id/pastePin"
+            android:layout_gravity="right"
+            style="?android:buttonBarButtonStyle"
+            android:paddingBottom="5dp"
+            android:src="@drawable/tick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    <com.cunoraz.tagview.TagView
+        xmlns:tagview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tag_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        tagview:lineMargin="5dp"
+        tagview:tagMargin="5dp"
+        tagview:textPaddingLeft="8dp"
+        tagview:textPaddingTop="5dp"
+        tagview:textPaddingRight="8dp"
+        tagview:textPaddingBottom="5dp" />
+
+
+</LinearLayout>

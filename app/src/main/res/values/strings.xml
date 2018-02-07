@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">SplitBill</string>
+    <string name="auth_failed">User Account not Created</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email Id</string>
+    <string name="signup">Not yet Registered? Sign up!</string>
+    <string name="groupname">Group Name</string>
+    <string name="total_Expense">Total Flow</string>
+    <string name="my_Expense">My Net Flow</string>
+    <string name="groupexists">Group already exists</string>
+    <string name="nogroup">No Such group exists</string>
+    <string name="internetgroupmessage">Turn on Internet Connectivity</string>
+    <string name="createbuttontext">+ Create a Group</string>
+    <string name="joinbuttontext">+ Join a Group</string>
+    <string name="autocompletion_help">Group Name</string>
+    <string name="getHttpUrl">http://192.168.1.100:3500/</string>
+    <string name="netFlow">You have a net flow of  \u20B9  </string>
+    <string name="owe">You owe a total of \u20B9</string>
+    <string name="owed">You are owed a total of \u20B9</string>
+    <string name="settled">You are all settled up</string>
+    <string name="groupmessage">No Group Formed yet or Internet Connection is unavaliable</string>
+
+    <string-array name="titleArray">
+        <item>Group</item>
+        <item>TAG</item>
+        <item>NOTIFICATIONS</item>
+        <item>TRACK</item>
+    </string-array>
+
+    <string-array name="descriptionArray">
+        <item>Create a new Group,join an existing group or leave a group</item>
+        <item>Flexible with tagging specific members in the group for division</item>
+        <item>Get instant realtime notifications of any activity happening in the group</item>
+        <item>Track your expense habits in different joined groups</item>
+    </string-array>
+
+
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_about">Rate Us</string>
+    <string name="nav_logout">Log out</string>
+    <string name="clear_list">Clear Expenses</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Settings</item>
+        <item>About Us</item>
+        <item>Log out</item>
+    </string-array>
+
+
+    <!-- Deep Link Strings -->
+
+    <string name="action_deep_link">
+        com.google.android.gms.samples.appinvite.DEEP_LINK_ACTION
+    </string>
+
+    <string name="invite">Send invitations!</string>
+    <string name="welcome">Invites</string>
+    <string name="referrer_hint">Deep link not provided</string>
+    <string name="deep_link_default">Deep link not set</string>
+    <string name="invitation_id_default">Invitation ID not set</string>
+    <string name="invite_friends">Invite Friends</string>
+
+    <string name="invitation_title">Invite Friends on SplitBill</string>
+    <string name="invitation_message">This app is terrific, give it a try and open the link to join the group</string>
+    <string name="invitation_deep_link">https://yhh5m.app.goo.gl</string>
+    <string name="invitation_custom_image">https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png</string>
+    <string name="invitation_cta">Open</string>
+
+    <string name="deep_link_fmt" formatted="false">Deep Link: %s</string>
+    <string name="invitation_id_fmt" formatted="false">Invitation ID: %s</string>
+
+    <string name="sent_invitations_fmt" formatted="false">Sent %d invitations</string>
+    <string name="send_failed">Sending invitations failed</string>
+    <string name="invite_dialog_title">You got an invitation!</string>
+
+    <string name="google_play_services_error">Google Play Services Error</string>
+</resources>

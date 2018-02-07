@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shashank.singh.splitbill.Starter.MainActivity">
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@+id/signup_text"
+       />
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/sign_in"
+        android:textColor="@color/colorPrimaryDark"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:id="@+id/email_sign_in"
+        android:layout_alignBottom="@id/sign_in_button"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:gravity="center_horizontal"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="serif"
+        android:textSize="15sp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="60dp"
+        android:id="@+id/signup_text"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/progressBarCircularIndeterminate"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Large"
+        android:indeterminateTint="@color/colorAccent"
+        />
+</RelativeLayout>
