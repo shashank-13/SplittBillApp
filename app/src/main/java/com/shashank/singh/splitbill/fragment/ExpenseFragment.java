@@ -42,6 +42,7 @@ import com.shashank.singh.splitbill.Networking.TestAsyncTask;
 import com.shashank.singh.splitbill.R;
 import com.shashank.singh.splitbill.SharedPreferences.Preference;
 import com.shashank.singh.splitbill.Utils.MySingleton;
+import com.shashank.singh.splitbill.Utils.TypefaceUtil;
 import com.shashank.singh.splitbill.adapter.AutoCompleteAdapter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -104,6 +105,14 @@ public class ExpenseFragment extends android.support.v4.app.Fragment  {
         super.onCreateOptionsMenu(menu, inflater);
     }
 
+    private String pad(int n) {
+        if(n<10)
+            return '0'+String.valueOf(n);
+
+        return String.valueOf(n);
+
+    }
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -126,6 +135,7 @@ public class ExpenseFragment extends android.support.v4.app.Fragment  {
         datePickerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 final Calendar c = Calendar.getInstance();
                 int mYear = c.get(Calendar.YEAR);
                 int mMonth = c.get(Calendar.MONTH);
@@ -139,7 +149,8 @@ public class ExpenseFragment extends android.support.v4.app.Fragment  {
                             public void onDateSet(DatePicker view, int year,
                                                   int monthOfYear, int dayOfMonth) {
 
-                                date=dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
+
+                                date=pad(dayOfMonth)+ "/" + pad(monthOfYear + 1) + "/" + year;
 
                             }
                         }, mYear, mMonth, mDay);

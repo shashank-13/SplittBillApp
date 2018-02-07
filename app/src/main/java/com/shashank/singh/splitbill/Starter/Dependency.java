@@ -41,7 +41,8 @@ import java.lang.reflect.Modifier;
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
+
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -247,9 +248,20 @@ public class Dependency extends AppCompatActivity {
     private void setActivityLog(String message)
     {
 
-            SimpleDateFormat month_date = new SimpleDateFormat(" MMMMMM");
-            String date = Calendar.getInstance().get(Calendar.DATE) + " " + month_date.format(Calendar.getInstance().getTime());
-            if(new Select().from(ActivityModel.class).execute().size() > 15)
+        String string="";
+        Date date=new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
+        simpleDateFormat.applyPattern("dd");
+        string+=simpleDateFormat.format(date);
+
+        simpleDateFormat.applyPattern("MM");
+
+        string=string+"/"+simpleDateFormat.format(date);
+        simpleDateFormat.applyPattern("yyyy");
+        string=string+"/" + simpleDateFormat.format(date);
+
+
+        if(new Select().from(ActivityModel.class).execute().size() > 15)
             {
                 long id=new Select().from(ActivityModel.class).executeSingle().getId();
 
@@ -258,7 +270,7 @@ public class Dependency extends AppCompatActivity {
             }
             ActivityModel activityModel = new ActivityModel();
             activityModel.mMessage=message;
-            activityModel.mDate=date;
+            activityModel.mDate=string;
             activityModel.save();
         startActivity(new Intent(Dependency.this,TabActivity.class));
         finish();

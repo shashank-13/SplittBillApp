@@ -15,6 +15,7 @@ import com.activeandroid.query.Select;
 import com.shashank.singh.splitbill.Model.ActivityModel;
 import com.shashank.singh.splitbill.R;
 import com.shashank.singh.splitbill.Utils.MySingleton;
+import com.shashank.singh.splitbill.Utils.TypefaceUtil;
 import com.shashank.singh.splitbill.adapter.ListAdapter;
 
 import java.util.ArrayList;
@@ -44,6 +45,10 @@ public class ActivityFragment extends android.support.v4.app.Fragment {
         Collections.reverse(activityModels);
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+    }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

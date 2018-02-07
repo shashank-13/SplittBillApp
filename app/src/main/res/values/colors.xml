@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00695C</color>
     <color name="colorAccent">#00BFA5</color>
     <color name="navigationBarColor">#000000</color>
+    <color name="white">#FFFFFF</color>
     <color name="tealDark">#004D40</color>
     <color name="firstslide">#00E1FF</color>
     <color name="secondslide">#FF4081</color>

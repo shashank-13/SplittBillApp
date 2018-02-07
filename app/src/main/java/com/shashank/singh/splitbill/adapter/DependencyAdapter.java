@@ -58,10 +58,10 @@ public class DependencyAdapter extends ArrayAdapter<FinalResult> {
         String c1= output1.substring(0,1);
         String c2=output2.substring(0,1);
 
-        TextDrawable drawable1 = TextDrawable.builder().buildRound(c1, Color.RED);
+        TextDrawable drawable1 = TextDrawable.builder().buildRound(c1, Color.parseColor("#00BFA5"));
         imageView1.setImageDrawable(drawable1);
 
-        TextDrawable drawable2 = TextDrawable.builder().buildRound(c2, Color.RED);
+        TextDrawable drawable2 = TextDrawable.builder().buildRound(c2, Color.parseColor("#00BFA5"));
         imageView2.setImageDrawable(drawable2);
     }
 

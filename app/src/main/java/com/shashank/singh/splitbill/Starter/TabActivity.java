@@ -34,6 +34,7 @@ import com.shashank.singh.splitbill.Helper.PollService;
 import com.shashank.singh.splitbill.Networking.Common;
 import com.shashank.singh.splitbill.R;
 import com.shashank.singh.splitbill.SharedPreferences.Preference;
+import com.shashank.singh.splitbill.Utils.TypefaceUtil;
 import com.shashank.singh.splitbill.fragment.ActivityFragment;
 import com.shashank.singh.splitbill.fragment.ExpenseFragment;
 import com.shashank.singh.splitbill.fragment.GroupFragment;
@@ -191,8 +192,8 @@ public class TabActivity extends AppCompatActivity {
         String input= new Preference(this).getAVATAR();
         String output=input.substring(0,1).toUpperCase()+input.substring(1);
         txtName.setText(output);
-        TextDrawable drawable1 = TextDrawable.builder().buildRound(output.substring(0,1), Color.BLUE);
-        imageView.setImageDrawable(drawable1);
+       
+        imageView.setImageResource(R.drawable.ic_account_circle_black_24dp);
         txtEmail.setText(new Preference(this).getEMAIL());
 
     }

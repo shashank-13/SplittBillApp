@@ -42,6 +42,7 @@ import com.shashank.singh.splitbill.R;
 import com.shashank.singh.splitbill.SharedPreferences.Preference;
 import com.shashank.singh.splitbill.Starter.Dependency;
 import com.shashank.singh.splitbill.Utils.MySingleton;
+import com.shashank.singh.splitbill.Utils.TypefaceUtil;
 import com.shashank.singh.splitbill.adapter.GroupAdapter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -56,6 +57,7 @@ import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -91,7 +93,6 @@ public class GroupFragment extends android.support.v4.app.Fragment {
     public void onResume() {
         super.onResume();
         Log.v(TAG,"GROUP ON RESUME CALLED");
-
     }
 
     @Override
@@ -311,8 +312,19 @@ public class GroupFragment extends android.support.v4.app.Fragment {
                     Toast.makeText(getActivity(),"Data added successfully",Toast.LENGTH_SHORT).show();
                     if(flag)
                     {
-                        SimpleDateFormat month_date = new SimpleDateFormat(" MMMMMM");
-                        String date = Calendar.getInstance().get(Calendar.DATE) + " " + month_date.format(Calendar.getInstance().getTime());
+                        String string="";
+                        Date date=new Date();
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
+                        simpleDateFormat.applyPattern("dd");
+                        string+=simpleDateFormat.format(date);
+
+                        simpleDateFormat.applyPattern("MM");
+
+                        string=string+"/"+simpleDateFormat.format(date);
+                        simpleDateFormat.applyPattern("yyyy");
+                        string=string+"/" + simpleDateFormat.format(date);
+
+
                         String message = "You created a new group "+group;
                         if(new Select().from(ActivityModel.class).execute().size() > 15)
                         {
@@ -323,13 +335,11 @@ public class GroupFragment extends android.support.v4.app.Fragment {
                         }
                         ActivityModel activityModel = new ActivityModel();
                         activityModel.mMessage=message;
-                        activityModel.mDate=date;
+                        activityModel.mDate=string;
                         activityModel.save();
                     }
                     else
                     {
-                        SimpleDateFormat month_date = new SimpleDateFormat(" MMMMMM");
-                        String date = Calendar.getInstance().get(Calendar.DATE) + " " + month_date.format(Calendar.getInstance().getTime());
                         String message = "You joined the group "+group;
                         if(new Select().from(ActivityModel.class).execute().size() > 15)
                         {
@@ -338,9 +348,22 @@ public class GroupFragment extends android.support.v4.app.Fragment {
                             ActivityModel activityModel = ActivityModel.load(ActivityModel.class,id);
                             activityModel.delete();
                         }
+                        String string="";
+                        Date date=new Date();
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
+                        simpleDateFormat.applyPattern("dd");
+                        string+=simpleDateFormat.format(date);
+
+                        simpleDateFormat.applyPattern("MM");
+
+                        string=string+"/"+simpleDateFormat.format(date);
+                        simpleDateFormat.applyPattern("yyyy");
+                        string=string+"/" + simpleDateFormat.format(date);
+
+
                         ActivityModel activityModel = new ActivityModel();
                         activityModel.mMessage=message;
-                        activityModel.mDate=date;
+                        activityModel.mDate=string;
                         activityModel.save();
                     }
 

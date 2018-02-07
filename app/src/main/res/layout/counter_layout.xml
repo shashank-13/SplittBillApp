@@ -4,7 +4,7 @@
     <ImageButton
         android:id="@+id/myButton"
         android:layout_width="65dip"
-        android:background="@drawable/pending"
+        android:background="@drawable/ic_notifications_black_24dp"
         android:layout_height="65dip"/>
     <TextView
         android:id="@+id/textOne"
